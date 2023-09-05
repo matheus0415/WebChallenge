@@ -1,0 +1,15 @@
+.main {
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    border: 0;
+}
+
+.figure {
+    background-color: aquamarine;
+}
+
+.card {
+    background-color: red;
+}
