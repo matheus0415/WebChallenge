@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+
 }
+body *{
+    box-sizing: border-box;
+}
+
 .main {
     background-color: #201b2c;
     display: flex;
@@ -14,8 +22,10 @@ body {
     width: 50vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .right-login {
@@ -27,7 +37,12 @@ body {
 }
 
 .figure > h1 {
+    font-size: 3vw;
     color: #77ffc0;
+}
+
+.left-login-image{
+    width: 35vw;
 }
 
 .card {
@@ -50,6 +65,7 @@ body {
 }
 
 .textfield{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -70,7 +86,65 @@ body {
     box-sizing: border-box;
 }
 
+.textfield > input:hover {
+    outline: invert;
+}
+
 .textfield > label {
     color: #f0ffffde;
     margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    
+}
+
+.btn-login:hover{
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+
+@media only screen and (max-width: 950px){
+    .card{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main{
+        flex-direction: column;
+    }
+    .figure > h1{
+        display: none;
+    }
+    .figure {
+        width: 100%;
+        height: auto;
+    }
+    .right-login{
+        width: 100%;
+        height: auto; 
+    }
+    .left-login-image{
+        width: 50vw;
+    }
+    .card{
+        width: 90%;
+    }
 }
